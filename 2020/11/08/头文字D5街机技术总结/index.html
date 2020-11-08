@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="头文字D5,街机,秋名,藤原拓海,漂移技术总结,速度惩罚机制," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="我从入弯100km&#x2F;h降到入弯70km&#x2F;h，意想不到的事情发生了：方向盘根本没打多少，漂移非常顺畅，出弯速度提升极快，1s马上3挡，两个相反180度弯道的过渡无比流畅，节奏感非常明显，即使整个赛道中仍有几个地方仍然撞墙，但是藤原拓海从没超过我。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="头文字D5街机技术总结">
+<meta property="og:url" content="http://yoursite.com/2020/11/08/%E5%A4%B4%E6%96%87%E5%AD%97D5%E8%A1%97%E6%9C%BA%E6%8A%80%E6%9C%AF%E6%80%BB%E7%BB%93/index.html">
+<meta property="og:site_name" content="思念送给四月的爱丽丝">
+<meta property="og:description" content="我从入弯100km&#x2F;h降到入弯70km&#x2F;h，意想不到的事情发生了：方向盘根本没打多少，漂移非常顺畅，出弯速度提升极快，1s马上3挡，两个相反180度弯道的过渡无比流畅，节奏感非常明显，即使整个赛道中仍有几个地方仍然撞墙，但是藤原拓海从没超过我。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-11-08T14:21:01.000Z">
+<meta property="article:modified_time" content="2020-11-08T14:28:43.410Z">
+<meta property="article:author" content="Alice">
+<meta property="article:tag" content="头文字D5">
+<meta property="article:tag" content="街机">
+<meta property="article:tag" content="秋名">
+<meta property="article:tag" content="藤原拓海">
+<meta property="article:tag" content="漂移技术总结">
+<meta property="article:tag" content="速度惩罚机制">
+<meta name="twitter:card" content="summary">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"right","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2020/11/08/头文字D5街机技术总结/"/>
+
+
+
+
+
+  <title>头文字D5街机技术总结 | 思念送给四月的爱丽丝</title>
+  
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-right page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">思念送给四月的爱丽丝</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">与众不同</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/11/08/%E5%A4%B4%E6%96%87%E5%AD%97D5%E8%A1%97%E6%9C%BA%E6%8A%80%E6%9C%AF%E6%80%BB%E7%BB%93/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Alice">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="思念送给四月的爱丽丝">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">头文字D5街机技术总结</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-11-08T22:21:01+08:00">
+                2020-11-08
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>我从入弯100km/h降到入弯70km/h，意想不到的事情发生了：方向盘根本没打多少，漂移非常顺畅，出弯速度提升极快，1s马上3挡，两个相反180度弯道的过渡无比流畅，节奏感非常明显，即使整个赛道中仍有几个地方仍然撞墙，但是藤原拓海从没超过我。</p>
+<a id="more"></a>
+
+<h2 id="加减速"><a href="#加减速" class="headerlink" title="加减速"></a>加减速</h2><p>加减速的总结就是手动挡的总结。</p>
+<h3 id="自动挡"><a href="#自动挡" class="headerlink" title="自动挡"></a>自动挡</h3><p>毫无疑问，任何人一开始玩头文字D肯定用自动挡。因为刚开车，想要操控好车子的走向都十分困难，在急弯的时候还要进行漂移，谁还有多余的精力去挂档？所以刚开始飙车的时候，我们都用自动挡，要撞的时候踩刹车，其余时间踩油门。</p>
+<h3 id="道路中心黄线"><a href="#道路中心黄线" class="headerlink" title="道路中心黄线"></a>道路中心黄线</h3><p>开车的时候看着道路的中心黄线开，车速过快和过慢，都会偏离中心黄线，这就是你要刹车或加油的时候了。<strong><em>保证你的车子不偏离中心线，是你飙车第一个要掌握的技术</em></strong>。</p>
+<h3 id="刹车和油门"><a href="#刹车和油门" class="headerlink" title="刹车和油门"></a>刹车和油门</h3><p>但是这样问题就来了：我即将漂移的时候，必须将速度降下来。因为你不可能用160km/h的速度踩油门漂移过弯，这是违背物理规律的，是会发生安全事故是的（本文所有括号内容只为了解释，可以不看。惯性使得车子在转弯的时候依然往前行驶，如果不踩刹车，继续160km/h过弯，那肯定是要偏离中心黄线，飞出车道，跌入深谷的）。但是我们又不想让速度掉下来，我们想要飙车，要什么安全？能用120km/h速度过弯，为什么要降到110km/h？也就是说，<strong><em>我们刹车到一个比较合理的速度之后，就要努力保持这个速度，这样才能以最快的速度过弯。</em></strong></p>
+<p>方法是踩油门？不行。因为自动挡一踩油门，速度就会上升，你只能飞悬崖；方法是踩刹车？不行，你已经刹到一个理想的速度了，再刹就要慢了，开这么慢还不实际开车；方法是踩一下油门，又踩一下刹车，然后又踩一下油门，再刹车，动态保持速度稳定？理论上可以，但是你的脚会累死。</p>
+<p>幸运的是，手动挡解决了这个问题。假如你想保持120km/h速度过弯，那你在120km/h的时候挂3挡，则无论你怎么踩油门，你的车速也不会超过120km/h的，所以你在定死自己想要的速度之后，踩住油门不放就可以了。这就是我接下来要进行总结的一个技术的转折点：从自动挡过渡到手动挡。</p>
+<h3 id="手动挡"><a href="#手动挡" class="headerlink" title="手动挡"></a>手动挡</h3><h4 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h4><p>首先我说一下手动挡的缺点：1、想要继续加速，必须进行挂档操作；2、要使速度提升得有效率，必须要挂对应的挡位，这就要开车的时候频繁进行挂档操作。（比如，你想让80km/h一下子提到100km/h，那么2挡就是最快的挡位，1s左右即可完成；但如果你用5挡，那你从80km/h升到90km/h都要用一年的时间。）3、总的来说，手动挡就是操作不方便。我要加速就踩油门得了，要减速就踩刹车得了，为什么要挂档？</p>
+<h4 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h4><p>在我看来，手动挡的优点只有一个，那就是在你将160km/h刹到120km/h后，你挂挡，然后一直踩油门，那么你就能一直120km/h。下面我来论述这个优点的意义。</p>
+<p>我现在要进入弯道了，最适合这个弯道的速度是120km/h，但是我现在速度是130km/h。我需要100m的路程进行刹车，这样刚好进入弯道，直线全速冲刺。但是我无法进行如此准确的控制。我刹到120km/h的时候，离弯道还有一段直线要走，本来可以全速冲的，但我却刹车刹早了。此时，如果我刹车，就错过了最合适的速度；如果我加油，就会飞出悬崖。</p>
+<p>但我是手动挡，我继续踩油门，速度既不上升，也不下降！</p>
+<h2 id="加减速总结"><a href="#加减速总结" class="headerlink" title="加减速总结"></a>加减速总结</h2><p>加减速的功能是保持你的路线不偏离，毫无阻碍地前进，然后才是高速无阻碍前进。</p>
+<p><strong><em>自动挡可以实现这个目标，但是自动挡在高难度的地图里面，你过弯会非常不顺畅。不是飞出悬崖，就是撞到护栏，要顺利过弯很靠运气。手动挡可以更好地实现这个目标，不靠运气，靠挂档，麻烦一点，就可以如你所愿顺利过弯。</em></strong></p>
+<p>从自动挡过渡到手动挡是一个瓶颈，兴趣不大的人，遇到这个瓶颈就不玩了；有点兴趣的人，会主动去适应手动挡，适应之后他兴趣会极大提升。但是不久他又遇到了瓶颈：怎么漂移？</p>
+<h2 id="漂移"><a href="#漂移" class="headerlink" title="漂移"></a>漂移</h2><h3 id="为什么要漂移"><a href="#为什么要漂移" class="headerlink" title="为什么要漂移"></a>为什么要漂移</h3><p>如前所述，你已经用手动挡定死了最好的入弯速度，如果你不漂移，那你为了不偏离黄线，你还是要通过加减速来调整你的方向，或者方向盘转多一点。</p>
+<p>可是我现在方向盘已经打死了，还要踩刹车，那我辛辛苦苦适应的手动挡不是失去了他的意义？我一开始定死的最佳速度不还是要被刹掉？</p>
+<p>没错，因为你不知道有漂移这个操作，而这个游戏并没有游戏说明，所以你可能一辈子也不知道这个技术：如果你进行漂移，那么你根本不用打死方向盘，车子靠惯性就以完美的速度走过弯道。（这时阻碍你前进的只剩下空气阻力了）</p>
+<h3 id="什么是漂移"><a href="#什么是漂移" class="headerlink" title="什么是漂移"></a>什么是漂移</h3><p>为了定死速度，你挂了低速档；为了定死速度，你踩刹车，到了理想速度的时候马上放开，然后再踩一下油门马上放开，这样踩进入了漂移：<strong><em>一刹，一油</em></strong>。</p>
+<p><strong><em>但不可避免的一点是：为了不偏离道路中心线你必须微调方向盘。</em></strong></p>
+<p><strong><em>走完弯道后马上踩油门，这个瞬间的速度正好可以挂快下一档。这就是完美的漂移。</em></strong></p>
+<h3 id="妙义（享受和提高漂移技术的最佳地方）"><a href="#妙义（享受和提高漂移技术的最佳地方）" class="headerlink" title="妙义（享受和提高漂移技术的最佳地方）"></a>妙义（享受和提高漂移技术的最佳地方）</h3><p>如果你不会漂移，那么你绝对赢不了庄司慎吾。连中里毅都见不到。</p>
+<p>我认为，想要入门漂移就去妙义，而不是秋名湖。这里弯道很宽，即使你速度过快冲过头，也可以通过调整方向盘避免冲出悬崖；即使你没摸清这些弯道的完美入弯速度是什么，也有很大的操作空间进行调整。</p>
+<p><strong><em>在妙义，入弯的速度很多都是120km/h左右，你需要在漂移前挂3挡，这样你漂移完之后可以1s挂4挡，2s上140km/h。这就是我认为的完美漂移。</em></strong></p>
+<p>这个地图可以让你充分享受漂移的乐趣，一刹车，一油门，成功漂移，不需要严格的操作，心情越好，漂移越完美，爽！</p>
+<p>在享受的过程中，你也许会多次撞墙，你也许提速像个乌龟，这些就是你需要提升的地方。</p>
+<p>只要你在妙义跑多几次，就能称霸妙义。现在你来到了秋名，秋名的最佳入弯速度也许是90km/h，对应的最佳挡位是2挡。你按照妙义的方法去玩，虽然会大量撞墙，但是你只要把握好节奏，你仍然可以打败高桥凉介（第四个boss），但你却永远无法打败藤原拓海。</p>
+<h3 id="秋名（头文字D的游戏规则：撞墙惩罚）"><a href="#秋名（头文字D的游戏规则：撞墙惩罚）" class="headerlink" title="秋名（头文字D的游戏规则：撞墙惩罚）"></a>秋名（头文字D的游戏规则：撞墙惩罚）</h3><p>秋名与妙义的最大的区别就是：秋名的弯道非常窄，你虽然选好入弯速度，并且掌握了漂移，方向盘已经打死，但是你依然一直撞墙，漂移似乎变得非常慢，走完弯道之后花了整整3s才到挂下一个档位的时机。所以你永远也无法打败藤原拓海。这就牵扯到游戏规则的问题了。</p>
+<p><strong><em>如果你在漂移的过程中撞墙，那么你漂移完后，虽然你挂了最有效率的挡位，但是速度提升会变得非常慢；如果你没有撞墙，那么你漂移完后，挂最有效率的挡位，那么速度提升就是正常的。这就是撞墙对提速的惩罚。</em></strong></p>
+<p>这个机制我的感悟是最深的。一开始我认为游戏设定藤原拓海不能撞墙，所以他的入弯速度不能高；而我能撞墙，所以我的入弯速度可以比他高，并且撞墙导致的速度下降也不会使得我的出弯速度比藤原拓海慢，我入弯速度、过弯速度和出弯速度都比他快，我有什么可能输？我一开始认为这就是玩家的优势。</p>
+<p>但是我错了，在游戏过程中，我明显感到的是：虽然我出弯比他快，但是他一下子就超过我了。我挑战了很多次，还是想不明白。于是在往上搜索了打败藤原拓海的方法，才知道有撞墙惩罚这个机制，这也是游戏不会对你说的。</p>
+<p><strong><em>知道这个规则后，我在入弯前挂2挡，把速度降到70，漂移像个乌龟一样，但由于速度慢，漂移很顺利，没撞墙。但是让我意想不到的是，我漂移完后踩油门，瞄了一眼速度表，98！随时可以挂3挡了？！！</em></strong>这意味着什么？请细看我说明：</p>
+<p>如果你入弯前挂2挡，速度降到100km/h，会发生漂移很难控制，导致撞墙，速度一下子损失到80。但是没关系，因为2挡的话，一下子就又可以回升到100km/h，然后就可以挂3挡继续飙车了。但是没想到在游戏中出现了这样的现象：出弯后速度提的像个乌龟似的，<em>从88km/h到100km/h，用了整整3秒！</em>这正是问题所在，而且这个问题你在玩游戏的过程中是不会发觉的，你只会认为你的入弯速度是不是太低了，你的方向盘是不是打太迟了，你的入弯点是不是太早了。</p>
+<p>我一开始不知道这个惩罚机制的时候，也从上面几个问题找答案，但还是无法打败藤原拓海。知道这个机制的之后，我还是抱着半信半疑的心态去尝试的，我从入弯100km/h降到入弯70km/h，意想不到的事情发生了：<del>方向盘根本没打多少，漂移非常顺畅，出弯速度提升极快，1s马上3挡，两个相反180度弯道的过渡无比流畅，节奏感非常明显，即使整个赛道中仍有几个地方仍然撞墙，但是藤原拓海从没超过我。</del>从结果看来，撞墙惩罚机制确实存在！</p>
+<p>除了撞墙惩罚之外，好像还有入弯过快惩罚等机制，但是我觉得撞墙惩罚是最合理的，也是最直观的，因为游戏里面撞墙，而实际生活中则是飞出悬崖，所以游戏不能让你这样做。这里有逻辑矛盾，因为游戏的大前提和现实的大前提有本质不同，但你只要知道撞墙机制有存在的道理就行了。</p>
+<h2 id="漂移总结"><a href="#漂移总结" class="headerlink" title="漂移总结"></a>漂移总结</h2><h3 id="漂移前的准备"><a href="#漂移前的准备" class="headerlink" title="漂移前的准备"></a>漂移前的准备</h3><p>选好你的最佳入弯速度，以及这个速度对应的挡位。</p>
+<p>选好刹车结束的点是在道路上的哪个点，即入弯点。</p>
+<h3 id="漂移-1"><a href="#漂移-1" class="headerlink" title="漂移"></a>漂移</h3><p>刹到最佳速度后马上松开刹车，马上踩油门又马上松开，即进入漂移，漂移不撞墙。</p>
+<h3 id="出弯"><a href="#出弯" class="headerlink" title="出弯"></a>出弯</h3><p>出弯后，可以很快（1s左右）挂高一档，提速贼快。</p>
+<h3 id="可能的技术：水沟下限法"><a href="#可能的技术：水沟下限法" class="headerlink" title="可能的技术：水沟下限法"></a>可能的技术：水沟下限法</h3><p>在刹车到理想速度后，不要马上踩油门，等到车头与排水沟平行了，再踩油门马上松开，这时车子踩进入漂移状态，平行擦过排水沟。但是我没有试过高速度操作，所以还不知道水沟下限是否有用，至少我没水沟下限就打败了藤原拓海。</p>
+<h2 id="游戏总结"><a href="#游戏总结" class="headerlink" title="游戏总结"></a>游戏总结</h2><p>玩头文字D的契机是发泄压力，发现很好玩的时机是学会漂移的瞬间。</p>
+<p>继续玩下去的原因是看了头文字D的动漫，觉得我在游戏机里面做到了动漫里面的事情，实在是感到很自豪。</p>
+<p>想要提高的动机是打败庄司慎吾，打败高桥凉介，打败藤原拓海，这也是游戏的一个乐趣：通过与强大的对手较量，从而提高自己的技术水平。</p>
+<p>选择秋名山的动机是头文字D的第一部。</p>
+<p>现在我已经称霸了秋名，自己的目标已经达到了，以后应该会更少去玩头文字D的街机了。而且我所在的城市，游戏厅本来就少，头文字D的街机已经坏了2台，有1台还放不出声音，这个游戏是不是要凉了？无论怎样，我还是很喜欢头文字D这个能让人有所提高的游戏，他给了我乐趣，让我感到幸福。</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/%E5%A4%B4%E6%96%87%E5%AD%97D5/" rel="tag"># 头文字D5</a>
+          
+            <a href="/tags/%E8%A1%97%E6%9C%BA/" rel="tag"># 街机</a>
+          
+            <a href="/tags/%E7%A7%8B%E5%90%8D/" rel="tag"># 秋名</a>
+          
+            <a href="/tags/%E8%97%A4%E5%8E%9F%E6%8B%93%E6%B5%B7/" rel="tag"># 藤原拓海</a>
+          
+            <a href="/tags/%E6%BC%82%E7%A7%BB%E6%8A%80%E6%9C%AF%E6%80%BB%E7%BB%93/" rel="tag"># 漂移技术总结</a>
+          
+            <a href="/tags/%E9%80%9F%E5%BA%A6%E6%83%A9%E7%BD%9A%E6%9C%BA%E5%88%B6/" rel="tag"># 速度惩罚机制</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/10/17/%E9%81%87%E8%A7%81%E5%8D%A1%E5%A4%AB%E5%8D%A1%E7%9A%84%E3%80%8A%E5%8F%98%E5%BD%A2%E8%AE%B0%E3%80%8B/" rel="next" title="遇见卡夫卡的《变形记》">
+                <i class="fa fa-chevron-left"></i> 遇见卡夫卡的《变形记》
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Alice</p>
+              <p class="site-description motion-element" itemprop="description">幸福、知识、崇高、观点、优美</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/%20%7C%7C%20archive">
+              
+                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">18</span>
+                  <span class="site-state-item-name">tags</span>
+                
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#加减速"><span class="nav-number">1.</span> <span class="nav-text">加减速</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#自动挡"><span class="nav-number">1.1.</span> <span class="nav-text">自动挡</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#道路中心黄线"><span class="nav-number">1.2.</span> <span class="nav-text">道路中心黄线</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#刹车和油门"><span class="nav-number">1.3.</span> <span class="nav-text">刹车和油门</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#手动挡"><span class="nav-number">1.4.</span> <span class="nav-text">手动挡</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#缺点"><span class="nav-number">1.4.1.</span> <span class="nav-text">缺点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#优点"><span class="nav-number">1.4.2.</span> <span class="nav-text">优点</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#加减速总结"><span class="nav-number">2.</span> <span class="nav-text">加减速总结</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#漂移"><span class="nav-number">3.</span> <span class="nav-text">漂移</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#为什么要漂移"><span class="nav-number">3.1.</span> <span class="nav-text">为什么要漂移</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是漂移"><span class="nav-number">3.2.</span> <span class="nav-text">什么是漂移</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#妙义（享受和提高漂移技术的最佳地方）"><span class="nav-number">3.3.</span> <span class="nav-text">妙义（享受和提高漂移技术的最佳地方）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#秋名（头文字D的游戏规则：撞墙惩罚）"><span class="nav-number">3.4.</span> <span class="nav-text">秋名（头文字D的游戏规则：撞墙惩罚）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#漂移总结"><span class="nav-number">4.</span> <span class="nav-text">漂移总结</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#漂移前的准备"><span class="nav-number">4.1.</span> <span class="nav-text">漂移前的准备</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#漂移-1"><span class="nav-number">4.2.</span> <span class="nav-text">漂移</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#出弯"><span class="nav-number">4.3.</span> <span class="nav-text">出弯</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#可能的技术：水沟下限法"><span class="nav-number">4.4.</span> <span class="nav-text">可能的技术：水沟下限法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#游戏总结"><span class="nav-number">5.</span> <span class="nav-text">游戏总结</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Alice</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
